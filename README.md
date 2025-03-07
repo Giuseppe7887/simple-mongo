@@ -35,15 +35,14 @@ use simple_mongo::MongoObject;
 #[derive(Debug, Serialize, Deserialize, Clone)]
 struct User {
     id: String, // id is required
-    name: String,
-    email: String,
+    name: String
 }
 
 impl MongoObject for User {
     fn new(name: &str) -> User {
         User {
             id: ObjectId::new().to_string(),
-            name: name.to_string(),
+            name: name.to_string()
         }
     }
 
@@ -79,7 +78,7 @@ async fn main(){
     );
 
     // define mongo connection passing your Data Structure as Generic
-    let db = SimpleMongo::<User>::connect(options).await;
+    let conn = SimpleMongo::<User>::connect(options).await;
 
 }
 ```
