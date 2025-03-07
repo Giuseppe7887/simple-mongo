@@ -19,8 +19,10 @@ pub struct SimpleMongo<T>
 where
     T: for<'de> Deserialize<'de> + Sync + Send + Serialize + MongoObject + Clone,
 {
+    #[allow(dead_code)]
     options: Options,
     collection: Collection<T>,
+    #[allow(dead_code)]
     database: Database,
 }
 
