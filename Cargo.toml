@@ -1,6 +1,6 @@
 [package]
 name = "simple-mongo"
-version = "0.1.1"
+version = "0.1.2"
 authors = ["Giuseppe Gravante"]
 description = "A simple MongoDB wrapper for Rust"
 edition = "2024"
